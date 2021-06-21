@@ -1,0 +1,32 @@
+<div class="container text-center mb-3">
+  <form>
+    <img class="mb-4" src="assets/images/ct.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Contact Us</h1>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="name" name="name" placeholder="Name" [(ngModel)]="ContactObj.name">
+      <label for="name">Name</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname"
+        [(ngModel)]="ContactObj.surname">
+      <label for="surname">Surname</label>
+    </div>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+        [(ngModel)]="ContactObj.email">
+      <label for="email">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="number" class="form-control" id="phonenumber" name="phonenumber" placeholder="0123456789"
+        [(ngModel)]="ContactObj.phonenumber">
+      <label for="phonenumber">Contact Number</label>
+    </div>
+    <div class="form-floating">
+      <textarea type="text" class="form-control" id="message" name="message" placeholder="Message" rows="10"
+        [(ngModel)]="ContactObj.message"> </textarea>
+      <label for="message">Message</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-secondary" type="button" (click)="contactUs()">Contact Us</button>
+  </form>
+</div>

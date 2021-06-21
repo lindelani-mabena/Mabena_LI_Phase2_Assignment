@@ -1,0 +1,38 @@
+<div class="container text-center">
+  <form>
+    <img class="mb-4" src="assets/images/ct.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Sign up</h1>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="name" name="name" placeholder="Name" [(ngModel)]="user.name">
+      <label for="name">Name</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname"
+        [(ngModel)]="user.surname">
+      <label for="surname">Surname</label>
+    </div>
+    <div class="form-floating">
+      <input type="number" class="form-control" id="phonenumber" name="phonenumber" placeholder="0712345678"
+        [(ngModel)]="user.phonenumber">
+      <label for="phonenumber">Phone Number</label>
+    </div>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+        [(ngModel)]="user.email">
+      <label for="email">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+        [(ngModel)]="user.password">
+      <label for="Password">Password</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="confirmpassword" name="confirmpassword"
+        placeholder="Confirm Password">
+      <label for="confirmpassword">Confirm Password</label>
+    </div>
+    <button class="w-100 btn btn-lg btn-secondary" type="submit" (click)="signUp()">Sign up</button>
+
+  </form>
+
+</div>

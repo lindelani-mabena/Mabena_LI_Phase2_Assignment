@@ -1,0 +1,44 @@
+<h1></h1>
+
+<div class="row">
+<div class="col-6 col-lg-6 mb-6">
+    <h1>{{ ChosenField }}</h1>
+  </div>
+
+<div  class="col-6 col-lg-6 mb-6"><h1>Total score is {{score}} out of {{totalNumberofQuestions}}</h1> </div>
+</div>
+<br />
+<br />
+<br />
+<form>
+    <div class="mb-3">
+        <label for="email" class="form-label">Chose Field</label>
+        <select class="form-select" name="ChosenField" id="ChosenField" [(ngModel)]="ChosenField">
+            <option value="cyber-security">Cyber security</option>
+            <option value="software-engineering">Software Engineering</option>
+            <option value="cloud-computing">Cloud Computing</option>
+            <option value="data-science">Data Science</option>
+            <option value="artificial-intelligence">Artificial Intelligence</option>
+        </select>
+        <button (click)="startTest()" class="btn-secondary form-control">Start Test </button>
+        <p><span>You selected: </span><b>{{ ChosenField }}</b></p>
+    </div><br />
+    <br />
+</form>
+
+<div  *ngFor="let questions of chosenFieldQuestions; let i=index">
+    <h3> {{i+1}}. {{ questions.strQuestion }}</h3>
+    <br />
+
+    <div *ngFor="let answer of questions.answers; let a=index">
+        <span>
+            <h5> {{answer.strAnswer}} </h5><input type="radio" (change)="handleChange($event)" [id]="answer.strAnswer" [name]=i+1
+                    value={{answer.strAnswer}} />
+        </span>
+    </div>
+    <br />
+</div>
+<script>
+</script>
+
+<button type="submit" class="btn btn-secondary form-control" (click)="calculate()">Submit</button>

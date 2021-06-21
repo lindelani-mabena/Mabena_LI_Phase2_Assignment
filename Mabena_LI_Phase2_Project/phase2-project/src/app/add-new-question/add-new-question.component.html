@@ -1,0 +1,55 @@
+<div class="container text-center mb-3">
+    <form>
+        <img class="mb-4" src="assets/images/ct.png" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Add New Question</h1>
+        <div class="form-floating">
+            <select class="form-select" name="field" id="field" [(ngModel)]="questionObj.field" placeholder="xcvbn">
+                <option value="software-engineering">Software Engineering</option>
+                <option value="cyber-security">Cyber Security</option>
+                <option value="artificial-intelligence">Artificial Intelligence</option>
+                <option value="data-science">Data Science</option>
+                <option value="cloud-computing">Cloud Computing</option>
+            </select>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="strQuestion" name="strQuestion" [(ngModel)]="questionObj.strQuestion" placeholder="Question here">
+            <label for="strQuestion">Question</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="strAnswer1" name="strAnswer1" placeholder="Correct Answer "
+                [(ngModel)]="strAnswer1">
+            <label for="strcorrectAnswer">Enter Answer 1 </label>
+            <input type="radio" (change)="handleChange($event)" id="strcorrectAnswer" name=strcorrectAnswer
+                    value="strAnswer1" >  Correct Answer
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="strAnswer2" name="strAnswer2" placeholder="Wrong Answer 1"
+                [(ngModel)]="strAnswer2">
+            <label for="strAnswer2">Enter Answer 2</label>
+            <input type="radio" (change)="handleChange($event)" id="strcorrectAnswer" name=strcorrectAnswer
+            value="strAnswer2"> Correct Answer
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="strAnswer3" name="strAnswer3" placeholder="Wrong Answer 2 "
+                [(ngModel)]="strAnswer3">
+            <label for="strAnswer3">Enter Answer 3</label>
+            <input type="radio" (change)="handleChange($event)" id="strcorrectAnswer" name=strcorrectAnswer
+            value="strAnswer3" > Correct Answer
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="strAnswer4" name="strAnswer4" placeholder="Wrong Answer 3"
+                [(ngModel)]="strAnswer4">
+            <label for="strAnswer4">Enter Answer 4</label>
+            <input type="radio" (change)="handleChange($event)" id="strcorrectAnswer" name=strcorrectAnswer
+            value="strAnswer4" > Correct Answer
+        </div>
+        <div class="form-floating">
+            <input type="strAnswer5" class="form-control" id="strAnswer5" name="strAnswer5" placeholder="Wrong Answer 4"
+                [(ngModel)]="strAnswer5">
+            <label for="strAnswer5">Enter Answer 5</label>
+            <input type="radio" (change)="handleChange($event)" id="strcorrectAnswer" name=strcorrectAnswer
+            value="strAnswer5"> Correct Answer
+        </div>
+        <button class="w-100 btn btn-lg btn-secondary form-floating" type="button" (click)="AddNewQuestion()">Add New Question</button>
+    </form>
+</div>
